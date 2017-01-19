@@ -4,3 +4,5 @@
 
 /packages
 /.vs
+/YasService/bin
+/YasService/obj/Debug
