@@ -8,23 +8,23 @@
 
     using YasService.Exceptions;
 
-    public class CustomerController : BaseController<Customer>
+    public class CustomersController : BaseController<Customer>
     {
-        public CustomerController(IUnitOfWork<YasContext> context) : base(context) { }
+        public CustomersController(IUnitOfWork<YasContext> context) : base(context) { }
 
-        [Route("Customer"), HttpGet]
+        [Route("Customers"), HttpGet]
         public override IEnumerable<Customer> Get()
         {
             return base.Get();
         }
 
-        [Route("Customer/{Id}"), HttpGet]
+        [Route("Customers/{Id}"), HttpGet]
         public override Customer Get(int id)
         {
             return base.Get(id);
         }
 
-        [Route("Customer"), HttpPost]
+        [Route("Customers"), HttpPost]
         public override Customer Post([FromBody]Customer customer)
         {
             if (base.Repository.Any(f => f.CustomerId == customer.CustomerId))
@@ -33,13 +33,13 @@
             return base.Post(customer);
         }
 
-        [Route("Customer/{Id}"), HttpPut]
+        [Route("Customers/{Id}"), HttpPut]
         public override Customer Put(int id, [FromBody]Customer customer)
         {
             return base.Put(id, customer);
         }
 
-        [Route("Customer/{Id}"), HttpDelete]
+        [Route("Customers/{Id}"), HttpDelete]
         public override void Delete(int id)
         {
             base.Delete(id);

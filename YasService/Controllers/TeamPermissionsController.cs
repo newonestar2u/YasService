@@ -2,9 +2,9 @@
 {
     using Models.Context;
 
-    public class TeamPermissionController
+    public class TeamPermissionsController
     {
-        public TeamPermissionController(IUnitOfWork<YasContext> context)
+        public TeamPermissionsController(IUnitOfWork<YasContext> context)
         {
             
         }

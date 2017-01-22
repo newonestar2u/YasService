@@ -8,36 +8,36 @@ namespace YasService.Controllers
     using Models;
     using Models.Context;
 
-    public class OrderController : BaseController<Order>
+    public class OrdersController : BaseController<Order>
     {
-        public OrderController(IUnitOfWork<YasContext> context) : base(context) { }
+        public OrdersController(IUnitOfWork<YasContext> context) : base(context) { }
 
-        [Route("Order"), HttpGet]
+        [Route("Orders"), HttpGet]
         public override IEnumerable<Order> Get()
         {
             return base.Get();
         }
 
-        [Route("Order/{Id}"), HttpGet]
+        [Route("Orders/{Id}"), HttpGet]
         public override Order Get(int id)
         {
             var data = base.Get(id);
             return data;
         }
 
-        [Route("Order"), HttpPost]
+        [Route("Orders"), HttpPost]
         public override Order Post([FromBody]Order order)
         {
             return base.Post(order);
         }
 
-        [Route("Order/{Id}"), HttpPut]
+        [Route("Orders/{Id}"), HttpPut]
         public override Order Put(int id, [FromBody]Order order)
         {
             return base.Put(id, order);
         }
 
-        [Route("Order/{Id}"), HttpDelete]
+        [Route("Orders/{Id}"), HttpDelete]
         public override void Delete(int id)
         {
             base.Delete(id);

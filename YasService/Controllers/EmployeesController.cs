@@ -6,23 +6,23 @@
     using Models.Context;
     using Exceptions;
 
-    public class EmployeeController : BaseController<Employee>
+    public class EmployeesController : BaseController<Employee>
     {
-        public EmployeeController(IUnitOfWork<YasContext> context) : base(context) { }
+        public EmployeesController(IUnitOfWork<YasContext> context) : base(context) { }
 
-        [Route("Employee"), HttpGet]
+        [Route("Employees"), HttpGet]
         public override IEnumerable<Employee> Get()
         {
             return base.Get();
         }
 
-        [Route("Employee/{Id}"), HttpGet]
+        [Route("Employees/{Id}"), HttpGet]
         public override Employee Get(int id)
         {
             return base.Get(id);
         }
 
-        [Route("Employee"), HttpPost]
+        [Route("Employees"), HttpPost]
         public override Employee Post([FromBody]Employee employee)
         {
             if (base.Repository.Any(f => f.UserId == employee.UserId))
@@ -31,13 +31,13 @@
             return base.Post(employee);
         }
 
-        [Route("Employee/{Id}"), HttpPut]
+        [Route("Employees/{Id}"), HttpPut]
         public override Employee Put(int id, [FromBody]Employee employee)
         {
             return base.Put(id, employee);
         }
 
-        [Route("Employee/{Id}"), HttpDelete]
+        [Route("Employees/{Id}"), HttpDelete]
         public override void Delete(int id)
         {
             base.Delete(id);
