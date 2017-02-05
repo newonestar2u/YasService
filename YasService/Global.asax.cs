@@ -14,7 +14,6 @@
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             FilterConfig.RegisterHttpFilters(GlobalConfiguration.Configuration.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            AutoMapperConfig.Configure();
         }
     }
 }

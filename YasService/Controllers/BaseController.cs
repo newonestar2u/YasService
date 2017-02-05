@@ -4,7 +4,6 @@
     using Models.Context;
     using System.Collections.Generic;
     using System.Web.Http;
-    using AutoMapper;
 
     using YasService.Exceptions;
 
@@ -44,7 +43,6 @@
         public virtual T Put(int id, T value)
         {
             var entity = this.Repository.GetById(id);
-            Mapper.Map(value, entity);
             this.Repository.Update(entity);
             this.Context.Save();
             return entity;

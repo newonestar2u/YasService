@@ -14,6 +14,7 @@
         }
 
         public string CustomerId { get; set; }
+        public string DoorNo { get; set; }
         public DateTime OrderDate { get; set; }
         public string OrderBy { get; set; }
         public string SalesBy { get; set; }

@@ -1,10 +1,14 @@
 ﻿namespace YasService.Models.Context
 {
+    using System;
     using System.Data.Entity;
+    using System.IO;
+
     public class YasContext : DbContext, IYasContext
     {
         public YasContext() : base("name=YasDbService")
         {
+            AppDomain.CurrentDomain.SetData("DataDirectory", AppDomain.CurrentDomain.BaseDirectory);
             Database.SetInitializer<YasContext>(null);
         }
 
