@@ -1,20 +1,18 @@
 ﻿namespace YasService.Models
 {
     using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("Order")]
-    public partial class Order : BaseModel
+    public class Order : BaseModel
     {
-        public Order()
-        {
-            //OrderLines = new HashSet<OrderLine>();
-        }
+        //public Order()
+        //{
+        //    //OrderLines = new HashSet<OrderLine>();
+        //}
 
         public string CustomerId { get; set; }
-        public string DoorNo { get; set; }
+
         public DateTime OrderDate { get; set; }
         public string OrderBy { get; set; }
         public string SalesBy { get; set; }
