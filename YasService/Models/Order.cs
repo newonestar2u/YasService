@@ -1,15 +1,16 @@
 ﻿namespace YasService.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("Order")]
-    public class Order : BaseModel
+    public sealed class Order : BaseModel
     {
-        //public Order()
-        //{
-        //    //OrderLines = new HashSet<OrderLine>();
-        //}
+        public Order()
+        {
+            OrderLines = new HashSet<OrderLine>();
+        }
 
         public string CustomerId { get; set; }
 
@@ -23,8 +24,7 @@
         public decimal Payment { get; set; }
         public string PaymentType { get; set; }
 
-        //[Required]
-        //[ForeignKey("Id")]
-        //public virtual ICollection<OrderLine> OrderLines { get; set; }
+        [ForeignKey("Id")]
+        public ICollection<OrderLine> OrderLines { get; set; }
     }
 }

@@ -20,5 +20,6 @@
         public DbSet<TeamPermission> TeamPermission { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<Invoice> Invoice { get; set; }
     }
 }

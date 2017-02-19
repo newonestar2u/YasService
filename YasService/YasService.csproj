@@ -307,6 +307,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\InvoicesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\TeamPermissionsController.cs" />
     <Compile Include="Controllers\PermissionsController.cs" />
@@ -330,6 +331,7 @@
     <Compile Include="Models\Context\IUnitOfWork.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderLine.cs" />
+    <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\PaginationParams.cs" />
     <Compile Include="Models\Permission.cs" />
     <Compile Include="Models\Product.cs" />

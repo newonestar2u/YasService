@@ -7,8 +7,8 @@
     [Table("Order_Ln")]
     public class OrderLine : BaseModel
     {
-        //[ForeignKey("Order")]
-        [Required]
+        [ForeignKey("Order")]
+        //[Required]
         public int OrderNumber { get; set; }
         public DateTime DeliveredOn { get; set; }
         public string Product { get; set; }
@@ -17,7 +17,7 @@
         public decimal Amount { get; set; }
         public decimal Discount { get; set; }
 
-        //[Required]
-        //public virtual Order Order { get; set; }
+        [Required]
+        public virtual Order Order { get; set; }
     }
 }
