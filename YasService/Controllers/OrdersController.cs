@@ -37,7 +37,7 @@
 
             var invoice = new Invoice
             {
-                Amount = result.OrderLines.Sum(x => x.Amount),
+                Amount = result.OrderLines.Sum(x => x.Amount * x.Quantity),
                 CustomerId = result.CustomerId,
                 OrderNumber = result.Id,
                 Status = "Open",

@@ -5,7 +5,7 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("Order")]
-    public sealed class Order : BaseModel
+    public class Order : BaseModel
     {
         public Order()
         {
@@ -25,6 +25,6 @@
         public string PaymentType { get; set; }
 
         [ForeignKey("Id")]
-        public ICollection<OrderLine> OrderLines { get; set; }
+        public virtual ICollection<OrderLine> OrderLines { get; set; }
     }
 }
