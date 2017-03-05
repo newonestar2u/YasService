@@ -21,6 +21,12 @@
             return base.Get(id);
         }
 
+        [Route("Invoices/{id}"), HttpPut]
+        public override Invoice Put(int id, Invoice value)
+        {
+            return base.Put(id, value);
+        }
+
         [Route("Invoices"), HttpPost]
         public override Invoice Post([FromBody]Invoice invoice)
         {

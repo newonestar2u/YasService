@@ -2,9 +2,9 @@
 {
     using Models;
     using Models.Context;
+    using System;
     using System.Collections.Generic;
     using System.Web.Http;
-
     using YasService.Exceptions;
 
     public abstract class BaseController<T> : ApiController where T : BaseModel, new()
@@ -43,6 +43,14 @@
         public virtual T Put(int id, T value)
         {
             var entity = this.Repository.GetById(id);
+            value.UpdatedOn = DateTime.Now;
+            AutoMapper.Mapper.Initialize(a =>
+            {
+                a.CreateMissingTypeMaps = true;
+                a.CreateMap<T, T>();
+            });
+
+            AutoMapper.Mapper.Map(value, entity);
             this.Repository.Update(entity);
             this.Context.Save();
             return entity;
@@ -52,7 +60,7 @@
         public virtual void Delete(int id)
         {
             var entity = this.Repository.GetById(id);
-            if(entity==null)
+            if (entity == null)
                 throw new NotFoundException("Not found item.");
             this.Repository.Delete(entity);
             this.Context.Save();
