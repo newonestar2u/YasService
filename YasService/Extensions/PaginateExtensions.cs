@@ -29,6 +29,51 @@ namespace YasService.Extensions
             {
                 pagination.PerPage = PaginatePerPageDefault;
             }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
+            if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }if (pagination.PerPage <= 0)
+            {
+                pagination.PerPage = PaginatePerPageDefault;
+            }
 
             return pagination.PerPage;
         }
