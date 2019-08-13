@@ -14,6 +14,9 @@
         [Route("Orders/{orderId}/OrderLines"), HttpGet]
         public new IEnumerable<OrderLine> Get(int orderId)
         {
+            this.Repository.Get(f => f.OrderNumber.Equals(orderId));
+            this.Repository.Get(f => f.OrderNumber.Equals(orderId));
+
             return this.Repository.Get(f => f.OrderNumber.Equals(orderId));
         }
 
